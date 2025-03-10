@@ -40,3 +40,33 @@ a {
     color-scheme: dark;
   }
 }
+
+.box {
+  padding: 8;
+  border: 2px solid black;
+  border-radius: 8;
+}
+
+.layout {
+  background-color: #0090FF;
+}
+
+.template {
+  background-color: #00A2C7;
+}
+
+.slot-default {
+  background-color: lightgray;
+}
+
+.slot-1 {
+  background-color: #FFE629;
+}
+
+.slot-2 {
+  background-color: #BDEE63;
+}
+
+.page {
+  background-color: #F76B15;
+}
