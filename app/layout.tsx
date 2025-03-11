@@ -30,25 +30,18 @@ export default function RootLayout(props: Readonly<RootLayoutProps>) {
     return (
         <html lang='en'>
             <body
-                style={{ maxWidth: 480, margin: 'auto' }}
-                className={`${geistSans.variable} ${geistMono.variable}`}>
-                <nav style={{ padding: '16px 0px', display: 'flex', gap: 16 }}>
+                className={`max-w-[480px] m-auto ${geistSans.variable} ${geistMono.variable}`}>
+                <nav className='py-4 flex gap-4'>
                     <Link href='/'>Home</Link>
                     <Link href='/feed'>Feed</Link>
                     <Link href='/search'>Search</Link>
                     <Link href='/settings'>Settings</Link>
                 </nav>
 
-                <div style={{ display: 'flex', gap: 16 }}>
-                    <main style={{ flex: 2 }}>{children}</main>
+                <div className='flex gap-4'>
+                    <main className='flex-2'>{children}</main>
 
-                    <div
-                        style={{
-                            flex: 1,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 16,
-                        }}>
+                    <div className='flex-1 flex flex-col gap-4'>
                         {trends}
                         {users}
                     </div>
