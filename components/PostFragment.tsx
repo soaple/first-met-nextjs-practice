@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface PostFragmentProps {
     post: MyNextApp.Post;
 }
@@ -7,11 +9,13 @@ function PostFragment(props: PostFragmentProps) {
 
     return (
         <div>
-            <img
+            <Image
                 src={post.image}
                 alt='post image'
-                width='256px'
-                height='auto'
+                priority
+                width={200}
+                height={200}
+                className='w-[200] h-[200] object-cover'
             />
             <h3>{post.title}</h3>
             <p>{post.content}</p>
