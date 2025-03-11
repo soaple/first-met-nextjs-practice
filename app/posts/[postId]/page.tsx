@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import PostFragment from '@/components/PostFragment';
 
 interface PageProps {
     params: Promise<{ postId: string }>;
@@ -24,6 +25,7 @@ async function PostItemPage(props: PageProps) {
     return (
         <div className='box page'>
             <p>{`PostItemPage ${postId}`}</p>
+            <PostFragment postId={postId} />
         </div>
     );
 }
